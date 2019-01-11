@@ -2,10 +2,11 @@
 {
     var firstNumber = document.getElementById('firstNumber').value;
     var secondNumber = document.getElementById('secondNumber').value;
-    var result = parseInt(firstNumber) / secondNumber;
-    var moduloResult = parseInt(firstNumber) % secondNumber;
+    //var result = parseInt(firstNumber) / secondNumber;
+    //var moduloResult = firstNumber % secondNumber;
 
     var regexNum = /^[0-9.,]+$/i; /* n'accepte que les nombres */
+    // CORRECTION : /^[0-9]+[.]?[0-9]*$/
     if (regexNum.test(firstNumber) == false) {
         alert('Premier nombre non valide')
     }
@@ -13,6 +14,6 @@
         alert('Deuxième nombre non valide')
     }
     else {
-        alert(` ${firstNumber} / ${secondNumber} \= ${result} \nIl reste : ${moduloResult}`);
+        alert(` ${firstNumber} / ${secondNumber} \= ${firstNumber / secondNumber} \nIl reste : ${firstNumber % secondNumber}`);
     }
 }
